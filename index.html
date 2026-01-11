@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社2W | 2W Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            /* 背景画像：東京の風景 */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2094&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: #444;
+        }
+        section {
+            padding: 100px 20px;
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+        }
+        .richgeeks-link {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding-bottom: 2px;
+        }
+        .richgeeks-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .richgeeks-link:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <span class="text-white">2W</span> <span class="text-gray-500 text-sm font-normal">Inc.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#philosophy" class="hover:text-white transition">Philosophy</a>
+                <a href="#business" class="hover:text-white transition">Business</a>
+                <a href="#message" class="hover:text-white transition">Message</a>
+                <a href="#company" class="hover:text-white transition">Company</a>
+                <a href="#contact" class="px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition">Contact</a>
+            </div>
+            <div class="md:hidden text-white">
+                <i class="fas fa-bars text-xl cursor-pointer"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center hero-bg relative overflow-hidden">
+        <div class="relative z-10 text-center px-4">
+            <!-- 以前よりサイズを小さくし、シンプルに一言に集約 -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-[0.1em] text-white">
+                Winning together.
+            </h1>
+            <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
+                2025年、私たちは全てのステークホルダーと共に<br class="hidden md:block">
+                新しい成長の形をデザインするクリエイティブ・パートナーです。
+            </p>
+            <div class="mt-10">
+                <a href="#philosophy" class="inline-block px-10 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-sm tracking-widest">VIEW MORE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7">
+                    <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">Corporate Philosophy</h2>
+                    <h3 class="text-3xl font-bold mb-8">企業理念</h3>
+                    <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
+                        <p class="text-white font-medium border-l-2 border-white pl-4">
+                            ステークホルダー全員とWin-Winの関係を築き、ビジネスの発展に貢献する
+                        </p>
+                        <p>
+                            私たちの社名「2W」は、<strong>"Win-Win"</strong>という言葉に由来しています。
+                        </p>
+                        <p>
+                            単なる一方的な利益の追求ではなく、クライアント、パートナー、エンジニア、そして社会。
+                            関わる全てのステークホルダーが勝利（Win）を得られる関係性を築くことこそが、
+                            持続的なビジネスの発展に不可欠であると信じています。
+                        </p>
+                        <p>
+                            この「相互繁栄」への強いこだわりが、2Wの全てのサービスの根底に流れています。
+                        </p>
+                    </div>
+                </div>
+                <div class="md:col-span-5">
+                    <div class="aspect-square bg-neutral-900 border border-neutral-800 flex flex-col items-center justify-center p-12 overflow-hidden group rounded-lg relative">
+                        <div class="text-[14rem] font-black text-neutral-800 absolute opacity-30 group-hover:scale-110 transition duration-700">2W</div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl font-bold text-white mb-2">Win-Win</p>
+                            <div class="h-0.5 w-12 bg-white mx-auto mb-4"></div>
+                            <p class="text-sm text-gray-500 tracking-widest uppercase">The Essence of 2W</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section id="business" class="bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">Our Services</h2>
+                <h3 class="text-3xl font-bold">事業内容</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- IT Consulting -->
+                <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-lg card-hover">
+                    <div class="w-12 h-12 bg-white text-black flex items-center justify-center rounded mb-6">
+                        <i class="fas fa-laptop-code text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">ITコンサルティング事業部</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        システム開発、ITコンサルティング、ITプロジェクト管理を一貫してサポート。経験豊富なコンサルタントが、お客様の課題に対して最適なソリューションを提案します。
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check mr-2 text-gray-500"></i> システム受託開発</li>
+                        <li><i class="fas fa-check mr-2 text-gray-500"></i> PMO支援・プロジェクト管理</li>
+                        <li><i class="fas fa-check mr-2 text-gray-500"></i> 高品質・低価格なサービス提供</li>
+                    </ul>
+                </div>
+
+                <!-- SES / RichGeeks -->
+                <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-lg card-hover">
+                    <div class="w-12 h-12 bg-white text-black flex items-center justify-center rounded mb-6">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">SES事業部</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        フリーランスエンジニアを対象としたエージェントプラットフォーム「RichGeeks」を運営。最適な案件マッチングを通じて、エンジニアのキャリア最大化を実現します。
+                    </p>
+                    <div class="mt-8 pt-6 border-t border-neutral-800">
+                        <a href="https://rich-geeks.com/" target="_blank" class="richgeeks-link text-lg font-bold flex items-center group">
+                            RichGeeks サイトへ <i class="fas fa-external-link-alt ml-2 text-xs opacity-0 group-hover:opacity-100 transition"></i>
+                        </a>
+                        <p class="text-xs text-gray-500 mt-2">※フリーランスエンジニア向け案件紹介サイト</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 order-2 md:order-1">
+                    <div class="aspect-[3/4] bg-neutral-800 grayscale hover:grayscale-0 transition duration-500 overflow-hidden rounded-lg border border-neutral-800">
+                        <div class="w-full h-full flex flex-col items-center justify-center bg-neutral-900 text-neutral-700">
+                            <i class="fas fa-user-tie text-8xl mb-4"></i>
+                            <span class="text-xs tracking-widest">Representative Image</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2">
+                    <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">Message</h2>
+                    <h3 class="text-3xl font-bold mb-8">代表挨拶</h3>
+                    <div class="space-y-6 text-gray-400 leading-relaxed italic">
+                        <p>
+                            「テクノロジーの進化を、誰もが享受できる未来へ。」
+                        </p>
+                        <p>
+                            2025年、私たちは大きな志を持って株式会社2Wを設立しました。現代のビジネスにおいてITはもはやインフラであり、その品質が企業の競争力を左右します。私たちは、高度な技術力を適正な価格で提供することで、企業のデジタルトランスフォーメーションを真に支援したいと考えています。
+                        </p>
+                        <p>
+                            また、SES事業を通じて、日本の技術力の根幹を支えるフリーランスエンジニアの皆様が、より自由に、より豊かに働ける環境を整えることも私たちの使命です。
+                        </p>
+                        <p>
+                            全てのステークホルダーと共に、次の時代の「当たり前」を創り出していく。その決意を「2W」という名に込めています。
+                        </p>
+                    </div>
+                    <div class="mt-10">
+                        <p class="text-white text-xl font-bold mb-1">榎原 詩陽</p>
+                        <p class="text-gray-500 text-sm tracking-widest uppercase">Shiyo Enohara / CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section id="company" class="bg-[#0f0f0f]">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4 text-center">Company Profile</h2>
+            <h3 class="text-3xl font-bold mb-12 text-center">会社紹介</h3>
+            
+            <div class="space-y-0 border-t border-neutral-800">
+                <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
+                    <div class="text-gray-500 font-medium">会社名</div>
+                    <div class="md:col-span-3 text-white">株式会社2W (2W Inc.)</div>
+                </div>
+                <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
+                    <div class="text-gray-500 font-medium">設立</div>
+                    <div class="md:col-span-3 text-white">2025年2月</div>
+                </div>
+                <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
+                    <div class="text-gray-500 font-medium">代表者</div>
+                    <div class="md:col-span-3 text-white">代表取締役 榎原 詩陽</div>
+                </div>
+                <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
+                    <div class="text-gray-500 font-medium">所在地</div>
+                    <div class="md:col-span-3 text-white">
+                        〒150-0021<br>
+                        東京都渋谷区恵比寿西2丁目8-4 EX恵比寿西ビル5階
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
+                    <div class="text-gray-500 font-medium">事業内容</div>
+                    <div class="md:col-span-3 text-white">
+                        ITコンサルティング事業 / システム開発受託<br>
+                        SES事業 / エンジニアエージェント「RichGeeks」運営
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">Contact</h2>
+                <h3 class="text-3xl font-bold">お問い合わせ</h3>
+                <p class="text-gray-500 mt-4">目的別にお問い合わせ先をご案内いたします。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Client Contact -->
+                <div class="p-12 border border-neutral-800 text-center flex flex-col items-center bg-neutral-900 rounded-lg">
+                    <h4 class="text-xl font-bold mb-6">エンジニア / ITコンサルを<br>お探しの企業様</h4>
+                    <p class="text-gray-400 text-sm mb-8">
+                        プロジェクト支援やシステム開発のご相談はこちらから。担当者より折り返しご連絡いたします。
+                    </p>
+                    <a href="https://forms.gle/your-google-form-id" target="_blank" class="w-full py-4 bg-white text-black font-bold hover:bg-gray-200 transition text-center rounded">
+                        お問い合わせフォームを開く
+                    </a>
+                </div>
+
+                <!-- Talent Contact -->
+                <div class="p-12 border border-neutral-800 text-center flex flex-col items-center bg-neutral-900 rounded-lg">
+                    <h4 class="text-xl font-bold mb-6">フリーランス / コンサルの<br>案件をお探しの方</h4>
+                    <p class="text-gray-400 text-sm mb-8">
+                        RichGeeksでは、高単価・プライム案件を多数取り揃えております。まずはサービスサイトをご覧ください。
+                    </p>
+                    <a href="https://rich-geeks.com/" target="_blank" class="w-full py-4 border border-white text-white font-bold hover:bg-white hover:text-black transition text-center rounded">
+                        RichGeeks サービスサイト
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 px-6 border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <div class="text-2xl font-bold tracking-tighter mb-2">2W Inc.</div>
+                <p class="text-xs text-neutral-600">© 2025 2W Inc. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-xs tracking-widest text-neutral-500 uppercase">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Information Security</a>
+                <a href="#company" class="hover:text-white transition">About Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
