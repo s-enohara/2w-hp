@@ -15,9 +15,9 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            /* 背景画像：東京の風景 */
+            /* 背景画像：Winning Together */
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                              url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2094&auto=format&fit=crop');
+                              url('images/winning_together.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -82,13 +82,11 @@
     <!-- Hero Section -->
     <header class="h-screen flex items-center justify-center hero-bg relative overflow-hidden">
         <div class="relative z-10 text-center px-4">
-            <!-- 以前よりサイズを小さくし、シンプルに一言に集約 -->
             <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-[0.1em] text-white">
                 Winning together.
             </h1>
             <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
-                2025年、私たちは全てのステークホルダーと共に<br class="hidden md:block">
-                新しい成長の形をデザインするクリエイティブ・パートナーです。
+                ITの力で、関わるすべての人とより良い未来を築く
             </p>
             <div class="mt-10">
                 <a href="#philosophy" class="inline-block px-10 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-sm tracking-widest">VIEW MORE</a>
@@ -120,14 +118,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="md:col-span-5">
-                    <div class="aspect-square bg-neutral-900 border border-neutral-800 flex flex-col items-center justify-center p-12 overflow-hidden group rounded-lg relative">
-                        <div class="text-[14rem] font-black text-neutral-800 absolute opacity-30 group-hover:scale-110 transition duration-700">2W</div>
-                        <div class="relative z-10 text-center">
-                            <p class="text-4xl font-bold text-white mb-2">Win-Win</p>
-                            <div class="h-0.5 w-12 bg-white mx-auto mb-4"></div>
-                            <p class="text-sm text-gray-500 tracking-widest uppercase">The Essence of 2W</p>
-                        </div>
+                <div class="md:col-span-5 flex items-center justify-center">
+                    <div class="w-full max-w-sm">
+                        <img src="images/shake_hands.png" alt="握手" class="w-full h-auto object-contain rounded-lg border border-neutral-800 shadow-sm">
                     </div>
                 </div>
             </div>
@@ -150,12 +143,12 @@
                     </div>
                     <h4 class="text-xl font-bold mb-4">ITコンサルティング事業部</h4>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        システム開発、ITコンサルティング、ITプロジェクト管理を一貫してサポート。経験豊富なコンサルタントが、お客様の課題に対して最適なソリューションを提案します。
+                        システム開発、ITコンサルティング、ITプロジェクト管理を一貫してサポート。お客様の課題に対して最適なソリューションを提案します。
                     </p>
                     <ul class="space-y-2 text-sm text-gray-300">
-                        <li><i class="fas fa-check mr-2 text-gray-500"></i> システム受託開発</li>
+                        <li><i class="fas fa-check mr-2 text-gray-500"></i> システム開発</li>
                         <li><i class="fas fa-check mr-2 text-gray-500"></i> PMO支援・プロジェクト管理</li>
-                        <li><i class="fas fa-check mr-2 text-gray-500"></i> 高品質・低価格なサービス提供</li>
+                        <li><i class="fas fa-check mr-2 text-gray-500"></i> LP、Webサイト制作</li>
                     </ul>
                 </div>
 
@@ -166,7 +159,7 @@
                     </div>
                     <h4 class="text-xl font-bold mb-4">SES事業部</h4>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        フリーランスエンジニアを対象としたエージェントプラットフォーム「RichGeeks」を運営。最適な案件マッチングを通じて、エンジニアのキャリア最大化を実現します。
+                        フリーランスエンジニアを対象としたエージェントプラットフォーム「RichGeeks」を運営。90%以上の高還元率を実現し、エンジニアのバリュー最大化を実現します。
                     </p>
                     <div class="mt-8 pt-6 border-t border-neutral-800">
                         <a href="https://rich-geeks.com/" target="_blank" class="richgeeks-link text-lg font-bold flex items-center group">
@@ -184,10 +177,9 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-5 order-2 md:order-1">
-                    <div class="aspect-[3/4] bg-neutral-800 grayscale hover:grayscale-0 transition duration-500 overflow-hidden rounded-lg border border-neutral-800">
-                        <div class="w-full h-full flex flex-col items-center justify-center bg-neutral-900 text-neutral-700">
-                            <i class="fas fa-user-tie text-8xl mb-4"></i>
-                            <span class="text-xs tracking-widest">Representative Image</span>
+                    <div class="flex items-center justify-center">
+                        <div class="w-4/5 aspect-[3/4] bg-neutral-800 transition duration-500 overflow-hidden rounded-lg border border-neutral-800">
+                            <img src="images/president_img.jpeg" alt="代表挨拶" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -199,18 +191,19 @@
                             「テクノロジーの進化を、誰もが享受できる未来へ。」
                         </p>
                         <p>
-                            2025年、私たちは大きな志を持って株式会社2Wを設立しました。現代のビジネスにおいてITはもはやインフラであり、その品質が企業の競争力を左右します。私たちは、高度な技術力を適正な価格で提供することで、企業のデジタルトランスフォーメーションを真に支援したいと考えています。
+                            現代のビジネスにおいてITはもはやインフラであり、その品質が企業の競争力を左右します。私たちは、高度な技術力を適正な価格で提供することで、企業のデジタルトランスフォーメーションを真に支援したいと考えています。
                         </p>
                         <p>
                             また、SES事業を通じて、日本の技術力の根幹を支えるフリーランスエンジニアの皆様が、より自由に、より豊かに働ける環境を整えることも私たちの使命です。
                         </p>
-                        <p>
-                            全てのステークホルダーと共に、次の時代の「当たり前」を創り出していく。その決意を「2W」という名に込めています。
-                        </p>
                     </div>
                     <div class="mt-10">
                         <p class="text-white text-xl font-bold mb-1">榎原 詩陽</p>
-                        <p class="text-gray-500 text-sm tracking-widest uppercase">Shiyo Enohara / CEO</p>
+                        <p class="text-gray-500 text-sm tracking-widest">Shiyo Enohara / 代表取締役</p>
+                        <p>
+                            北海道大学を卒業後、SIerや大手コンサルティングファームを経て、フリーランスとして独立。多数の大規模ITプロジェクトに参画した後、株式会社2Wを設立。
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -226,7 +219,7 @@
             <div class="space-y-0 border-t border-neutral-800">
                 <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
                     <div class="text-gray-500 font-medium">会社名</div>
-                    <div class="md:col-span-3 text-white">株式会社2W (2W Inc.)</div>
+                    <div class="md:col-span-3 text-white">株式会社2W</div>
                 </div>
                 <div class="grid md:grid-cols-4 py-6 border-b border-neutral-800">
                     <div class="text-gray-500 font-medium">設立</div>
