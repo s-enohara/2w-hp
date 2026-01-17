@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社2W | 2W Inc.</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -28,7 +29,12 @@
             border-color: #444;
         }
         section {
-            padding: 100px 20px;
+            padding: 60px 20px;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding: 100px 20px;
+            }
         }
         .glass-nav {
             background: rgba(10, 10, 10, 0.8);
@@ -56,6 +62,43 @@
         .richgeeks-link:hover::after {
             transform: scaleX(1);
         }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+            z-index: 40;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 16px 24px;
+            color: #e5e5e5;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .mobile-menu a.contact {
+            background: #ffffff;
+            color: #000000;
+            font-weight: bold;
+            border-bottom: none;
+        }
+        .mobile-menu a.contact:hover {
+            background-color: #cccccc;
+        }
     </style>
 </head>
 <body>
@@ -74,10 +117,19 @@
                 <a href="#contact" class="px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition">Contact</a>
             </div>
             <div class="md:hidden text-white">
-                <i class="fas fa-bars text-xl cursor-pointer"></i>
+                <i class="fas fa-bars text-xl cursor-pointer" id="hamburger-menu"></i>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#business">Business</a>
+        <a href="#message">Message</a>
+        <a href="#company">Company</a>
+        <a href="#contact" class="contact">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <header class="h-screen flex items-center justify-center hero-bg relative overflow-hidden">
@@ -297,6 +349,23 @@
     </footer>
 
     <script>
+        // ハンバーガーメニューの制御
+        const hamburgerIcon = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburgerIcon.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // モバイルメニューのリンククリック時にメニューを閉じる
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // スムーススクロール
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
