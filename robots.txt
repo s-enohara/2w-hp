@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /
+
+# Sitemap location
+Sitemap: https://hp.2w-tech.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
